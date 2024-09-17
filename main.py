@@ -9,8 +9,6 @@ from agents import MarketingAnalysisAgents
 from langchain_openai import ChatOpenAI
 
 
-
-
 tasks = MarketingAnalysisTasks()
 agents = MarketingAnalysisAgents()
 
