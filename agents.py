@@ -110,8 +110,8 @@ class MarketingAnalysisAgents:
 				],
 				llm=self.llm,
 				allow_delegation=True,
-				verbose=True,
-				max_iter=4
+				verbose=True
+				
 		)
 
 	def chief_creative_diretor_agent(self):
@@ -134,6 +134,6 @@ class MarketingAnalysisAgents:
 				],
 				llm=self.llm,
 				verbose=True,
-				max_iter=4,
+				
 				allow_delegation=True
 		)
