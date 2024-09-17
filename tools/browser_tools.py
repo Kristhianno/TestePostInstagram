@@ -34,9 +34,10 @@ class BrowserTools():
       task = Task(
           agent=agent,
           description=
-          f'Analyze and make a LONG summary the content bellow, make sure to include the ALL relevant information in the summary, return only the summary nothing else.\n\nCONTENT\n----------\n{chunk}'
+          f'Analyze and make a LONG summary the content bellow, make sure to include the ALL relevant information in the summary, return only the summary nothing else.\n\nCONTENT\n----------\n{chunk}',
+          expected_output="Analyze and make a LONG summary the content bellow, make sure to include the ALL relevant information in the summary, return only the summary nothing els"
       )
-      summary = task.execute()
+      summary = task.execute_sync()
       summaries.append(summary)
       content = "\n\n".join(summaries)
     return f'\nScrapped Content: {content}\n'

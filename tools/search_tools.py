@@ -9,16 +9,14 @@ class SearchTools():
 
   @tool("Search internet")
   def search_internet(query):
-    """Useful to search the internet about a given topic and return relevant
-    results."""
+    """Useful to search the internet about a given topic and return relevant results."""
     return SearchTools.search(query)
 
   @tool("Search instagram")
   def search_instagram(query):
-    """Useful to search for instagram post about a given topic and return relevant
-    results."""
+    """Useful to search for instagram post about a given topic and return relevant results."""
     query = f"site:instagram.com {query}"
-    return SearchTools.search(query)
+    return SearchTools.search
 
   def search(query, n_results=5):
     url = "https://google.serper.dev/search"
