@@ -2,10 +2,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from textwrap import dedent
-from crewai import Agent, Crew
+from crewai import Agent, Crew,Process
 
 from tasks import MarketingAnalysisTasks
 from agents import MarketingAnalysisAgents
+from langchain_openai import ChatOpenAI
+
+
+
 
 tasks = MarketingAnalysisTasks()
 agents = MarketingAnalysisAgents()
@@ -39,7 +43,10 @@ copy_crew = Crew(
 		campaign_development,
 		write_copy
 	],
-	verbose=True
+	verbose=True,
+    process=Process.hierarchical,
+    manager_llm= ChatOpenAI(temperature=0, model="gpt-3.5-turbo"),
+    memory= True
 )
 
 ad_copy = copy_crew.kickoff()
