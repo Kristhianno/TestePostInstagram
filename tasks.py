@@ -17,7 +17,11 @@ class MarketingAnalysisTasks:
 
 			Keep in mind, attention to detail is crucial for
 			a comprehensive analysis. It's currenlty 2024.
-			"""),expected_output='Analyze perfect to results',
+			"""),
+			expected_output=dedent("""\
+						  A product description listing the features, benefits and key selling points of the product.
+						  The report should and suggestion for enhancement or positioning
+						  """),
 			agent=agent
 		)
 
@@ -31,7 +35,10 @@ class MarketingAnalysisTasks:
 
 			Your final report MUST include BOTH all context about {product_website}
 			and a detailed comparison to whatever competitor they have competitors.
-			"""),expected_output='Execute this task perfectly',
+			"""),
+			expected_output=dedent("""\
+						  A List of the top three competitors of the company in question with a detailed 
+						  comparison between our company and another company"""),
 			agent=agent
 		)
 
@@ -48,7 +55,8 @@ class MarketingAnalysisTasks:
 
 			Your final answer MUST be ideas that will resonate with the audience and
 			also include ALL context you have about the product and the customer.
-			"""), expected_output='task complete',
+			"""), 
+			expected_output=dedent("A step by step campaign idea for instagram"),
 			agent=agent
 		)
 
@@ -69,7 +77,8 @@ class MarketingAnalysisTasks:
 
 			Your final answer MUST be 3 options for an ad copy for instagram that
 			not only informs but also excites and persuades the audience.
-			"""),expected_output='task complete',
+			"""),
+			expected_output='A list of three possible instagram and copy',
 			agent=agent
 		)
 
@@ -94,7 +103,13 @@ class MarketingAnalysisTasks:
 
 			Your final answer must be 3 options of photographs, each with 1 paragraph
 			describing the photograph exactly like the examples provided above.
-			"""),expected_output='task complete',
+			"""),
+			expected_output=dedent("""\
+									Here are some examples for you follow:
+			- high tech airplaine in a beautiful blue sky in a beautiful sunset super cripsy beautiful 4k, professional wide shot
+			- the last supper, with Jesus and his disciples, breaking bread, close shot, soft lighting, 4k, crisp
+			- an bearded old man in the snows, using very warm clothing, with mountains full of snow behind him, soft lighting, 4k, crisp, close up to the camera
+									"""),
 			agent=agent
 		)
 
@@ -116,6 +131,12 @@ class MarketingAnalysisTasks:
 
 			Your final answer must be 3 reviewed options of photographs,
 			each with 1 paragraph description following the examples provided above.
-			"""),expected_output='task complete',
+			"""),
+			expected_output=dedent("""\
+									Here are some examples for you follow:
+			- high tech airplaine in a beautiful blue sky in a beautiful sunset super cripsy beautiful 4k, professional wide shot
+			- the last supper, with Jesus and his disciples, breaking bread, close shot, soft lighting, 4k, crisp
+			- an bearded old man in the snows, using very warm clothing, with mountains full of snow behind him, soft lighting, 4k, crisp, close up to the camera
+									"""),
 			agent=agent
 		)

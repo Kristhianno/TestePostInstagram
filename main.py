@@ -67,7 +67,8 @@ image_crew = Crew(
 		take_photo,
 		approve_photo
 	],
-	verbose=True
+	verbose=True,
+    memory= True
 )
 
 image = image_crew.kickoff()
